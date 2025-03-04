@@ -44,3 +44,5 @@ I’m driven by a passion for **problem-solving** and **bringing technological s
 <!--<a href="" download>Download my resume</a>-->
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=D9BED1&height=120&section=footer" alt="footer"/>
+
+<!-- inspired by daria-stanilevici -->
