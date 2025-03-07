@@ -7,9 +7,10 @@
 ### My Mission
 I’m driven by a passion for **problem-solving** and **bringing technological solutions** to the table. Whether it’s through code, collaboration, or innovation, I aim to make a **positive impact** in society by leveraging technology to tackle real-world challenges and empower communities.
 
+<!--
 ### Main Skills
 [![My Skills](https://skillicons.dev/icons?i=py,regex,github,git,mongodb,mysql,java,js,nodejs,react,express,cpp,cs,dotnet,html,css,bootstrap,php,androidstudio,notion,bash,pytorch,tensorflow,swift,firebase,laravel,pytorch,docker)](https://skillicons.dev)
-
+-->
 
 ### Studying
 [![Learning](https://skillicons.dev/icons?i=next)](https://skillicons.dev)
@@ -34,7 +35,7 @@ I’m driven by a passion for **problem-solving** and **bringing technological s
 ![](https://github-profile-trophy.vercel.app/?username=Omayer111&theme=radical&no-frame=true&margin-w=4)
 
 
-### ✍️ Random Dev Quote
+### ✍️ Dev Quote
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=merko)
 
 ### Employer?
