@@ -27,7 +27,7 @@ I’m driven by a passion for **problem-solving** and **bringing technological s
 
 
 # 📊 GitHub Stats:
-<!--![](https://github-readme-stats.vercel.app/api?username=Omayer111&theme=aura_dark&hide_border=false&include_all_commits=true&count_private=true)<br/>-->
+![](https://github-readme-stats.vercel.app/api?username=Omayer111&theme=aura_dark&hide_border=false&include_all_commits=true&count_private=true)<br/>
 ![](https://nirzak-streak-stats.vercel.app/?user=Omayer111&theme=aura_dark&hide_border=false)<br/>
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=Omayer111&theme=aura_dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
 
