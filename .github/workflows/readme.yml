@@ -1,49 +1,39 @@
 name: Update README
 
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events for the "main" branch
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-
-  # Runs the workflow daily at midnight UTC
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 0 * * *"  # Daily at midnight UTC
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   update-readme:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      # Fetch the latest commit hash and update the README
-      - name: Update README with Latest Commit
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          LATEST_COMMIT=$(git log -1 --pretty=format:"%h")
-          echo "## Recent Activity" > README.md
-          echo "Latest Commit: $LATEST_COMMIT" >> README.md
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
 
-      # Commit and push the changes
-      - name: Update Recent Activity Section
+      - name: Install Dependencies
+        run: pip install requests
+
+      - name: Run Python Script to Update README
+        run: python update_readme.py
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff --cached --quiet || git commit -m "chore: update README with latest stats"
+          git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          LATEST_COMMIT=$(git log -1 --pretty=format:"%h")
-          COMMIT_MESSAGE=$(git log -1 --pretty=format:"%s")
-          AUTHOR=$(git log -1 --pretty=format:"%an")
-          TIMESTAMP=$(git log -1 --pretty=format:"%cd" --date=short)
-          RECENT_ACTIVITY="**Latest Commit:** [$LATEST_COMMIT](https://github.com/Omayer111/your-repo-name/commit/$LATEST_COMMIT) - $COMMIT_MESSAGE by $AUTHOR on $TIMESTAMP"
-          sed -i '/<!-- RECENT_ACTIVITY_START -->/,/<!-- RECENT_ACTIVITY_END -->/c\<!-- RECENT_ACTIVITY_START -->\n'"$RECENT_ACTIVITY"'\n<!-- RECENT_ACTIVITY_END -->' README.md
