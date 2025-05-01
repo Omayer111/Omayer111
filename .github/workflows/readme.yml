@@ -13,7 +13,7 @@ on:
 
   # Runs the workflow daily at midnight UTC
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "1 0 * * *"
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -27,27 +27,22 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      # Set up Python (or any other language you prefer for scripting)
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: "3.x"
-
-      # Install dependencies (if needed)
-      - name: Install Dependencies
+      # Fetch the latest commit hash and update the README
+      - name: Update README with Latest Commit
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          python -m pip install --upgrade pip
-          pip install requests
-
-      # Run the script to update the README
-      - name: Update README
-        run: python update_readme.py
+          LATEST_COMMIT=$(git log -1 --pretty=format:"%h")
+          echo "## Recent Activity" > README.md
+          echo "Latest Commit: $LATEST_COMMIT" >> README.md
 
       # Commit and push the changes
       - name: Commit and Push Changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
           git add README.md
-          git commit -m "Update README with latest data"
+          git commit -m "Update README with latest commit number"
           git push
