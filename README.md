@@ -40,10 +40,9 @@ I’m driven by a passion for **problem-solving** and **bringing technological s
 
 ### 📊 GitHub Stats:
 <div align="center">
-    ![GitHub Activity Graph](ACTIVITY_GRAPH_PLACEHOLDER)
-    ![GitHub Stats](STATS_PLACEHOLDER)
-    ![GitHub Streak](STREAK_PLACEHOLDER)
-    ![Top Languages](LANGUAGES_PLACEHOLDER)
+    <img src="https://github-readme-stats.vercel.app/api?username=Omayer111&theme=radical&hide_border=true&include_all_commits=true&count_private=true" alt="GitHub Stats" />
+    <img src="https://github-readme-streak-stats.herokuapp.com?user=Omayer111&theme=radical&hide_border=true" alt="GitHub Streak" />
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Omayer111&theme=radical&hide_border=true&include_all_commits=true&count_private=true&layout=compact" alt="Top Languages" />
 </div>
 
 
