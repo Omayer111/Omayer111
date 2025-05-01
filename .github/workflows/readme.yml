@@ -37,12 +37,13 @@ jobs:
           echo "Latest Commit: $LATEST_COMMIT" >> README.md
 
       # Commit and push the changes
-      - name: Commit and Push Changes
+      - name: Update Recent Activity Section
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git config --global user.name "GitHub Action"
-          git config --global user.email "action@github.com"
-          git add README.md
-          git commit -m "Update README with latest commit number"
-          git push https://x-access-token:${GITHUB_TOKEN}@github.com/Omayer111/Omayer111.git
+          LATEST_COMMIT=$(git log -1 --pretty=format:"%h")
+          COMMIT_MESSAGE=$(git log -1 --pretty=format:"%s")
+          AUTHOR=$(git log -1 --pretty=format:"%an")
+          TIMESTAMP=$(git log -1 --pretty=format:"%cd" --date=short)
+          RECENT_ACTIVITY="**Latest Commit:** [$LATEST_COMMIT](https://github.com/Omayer111/your-repo-name/commit/$LATEST_COMMIT) - $COMMIT_MESSAGE by $AUTHOR on $TIMESTAMP"
+          sed -i '/<!-- RECENT_ACTIVITY_START -->/,/<!-- RECENT_ACTIVITY_END -->/c\<!-- RECENT_ACTIVITY_START -->\n'"$RECENT_ACTIVITY"'\n<!-- RECENT_ACTIVITY_END -->' README.md
