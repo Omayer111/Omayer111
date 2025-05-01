@@ -39,12 +39,13 @@ I’m driven by a passion for **problem-solving** and **bringing technological s
 ---
 
 ### 📊 GitHub Stats:
+<!-- RECENT_ACTIVITY_START -->
 <div align="center">
     <img src="https://github-readme-stats.vercel.app/api?username=Omayer111&theme=radical&hide_border=true&include_all_commits=true&count_private=true" alt="GitHub Stats" />
     <img src="https://github-readme-streak-stats.herokuapp.com?user=Omayer111&theme=radical&hide_border=true" alt="GitHub Streak" />
     <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Omayer111&theme=radical&hide_border=true&include_all_commits=true&count_private=true&layout=compact" alt="Top Languages" />
 </div>
-
+<!-- RECENT_ACTIVITY_END -->
 
 <!--
 ## 🏆 GitHub Trophies
