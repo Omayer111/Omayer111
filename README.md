@@ -1,7 +1,7 @@
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=0:8A2387,100:E94057&height=120&section=header" alt="header"/>
 
 <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=25&duration=2000&pause=200&color=8A2387&width=500&lines=Hello%2C+it's+Abu+Omayer;Tech+Enthusiast+%7C+Problem+Solver" alt="Tech Enthusiast | Problem Solver"/>
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=25&duration=2000&pause=200&color=8A2387&width=500&lines=Hello%2C+I'm+Abu+Omayer;Tech+Enthusiast+%7C+Problem+Solver" alt="Tech Enthusiast | Problem Solver"/>
 </a>
 
 ### My Mission
@@ -49,12 +49,12 @@ I’m driven by a passion for **problem-solving** and **bringing technological s
 </div>
 
 ---
-
+<!--
 ## 🏆 GitHub Trophies
 <div align="center">
     <img src="https://github-profile-trophy.vercel.app/?username=Omayer111&theme=dracula&no-frame=true&margin-w=4" alt="GitHub Trophies" />
 </div>
-
+-->
 ---
 
 ### ✍️ Dev Quote
